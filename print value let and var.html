@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Types Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variable Types Example</h1>
+    <button onclick="showVar()">Show var Variables</button>
+    <button onclick="showLet()">Show let Variables</button>
+    <button onclick="showConst()">Show const Variables</button>
+    <div id="output"></div>
+
+    <script>
+        function showVar() {
+         
+            var str = "This is a string";
+            var num = 42;
+            var arr = [1, 2, 3, 4, 5];
+
+          
+            document.getElementById('output').innerHTML = `
+                <p><strong>Using var:</strong></p>
+                <p>String: ${str}</p>
+                <p>Number: ${num}</p>
+                <p>Array: ${arr.join(', ')}</p>
+            `;
+        }
+
+        function showLet() {
+            
+            let str = "This is another string";
+            let num = 3.14;
+            let arr = [10, 20, 30];
+
+            
+            document.getElementById('output').innerHTML = `
+                <p><strong>Using let:</strong></p>
+                <p>String: ${str}</p>
+                <p>Number: ${num}</p>
+                <p>Array: ${arr.join(', ')}</p>
+            `;
+        }
+
+        function showConst() {
+          
+            const str = "This is a constant string";
+            const num = 100;
+            const arr = [7, 8, 9];
+
+          
+            document.getElementById('output').innerHTML = `
+                <p><strong>Using const:</strong></p>
+                <p>String: ${str}</p>
+                <p>Number: ${num}</p>
+                <p>Array: ${arr.join(', ')}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

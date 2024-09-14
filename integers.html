@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration Examples</title>
+   
+</head>
+<body>
+    <h1>Array Iteration Examples</h1>
+    <button onclick="iterateArray()">Show Array Iterations</button>
+    <div id="output"></div>
+
+    <script>
+        // Array with integers and strings
+        const mixedArray = [10, "hello", 20, "world", 30, "foo", 40, "bar"];
+
+        function iterateArray() {
+            let output = '';
+
+            // 1. for loop
+            output += '<h2>Using for loop:</h2>';
+            for (let i = 0; i < mixedArray.length; i++) {
+                output += `<p>${mixedArray[i]}</p>`;
+            }
+
+            // // 2. for...in loop
+            // output += '<h2>Using for...in loop:</h2>';
+            // for (let index in mixedArray) {
+            //     output += `<p>${mixedArray[index]}</p>`;
+            // }
+
+            // 3. for...of loop
+            // output += '<h2>Using for...of loop:</h2>';
+            // for (let value of mixedArray) {
+            //     output += `<p>${value}</p>`;
+            // }
+
+            // // 4. forEach loop
+            // output += '<h2>Using forEach loop:</h2>';
+            // mixedArray.forEach(value => {
+            //     output += `<p>${value}</p>`;
+            // });
+
+            // // 5. while loop
+            // output += '<h2>Using while loop:</h2>';
+            // let i = 0;
+            // while (i < mixedArray.length) {
+            //     output += `<p>${mixedArray[i]}</p>`;
+            //     i++;
+            // }
+
+            // // 6. do...while loop
+            // output += '<h2>Using do...while loop:</h2>';
+            // i = 0;
+            // do {
+            //     output += `<p>${mixedArray[i]}</p>`;
+            //     i++;
+            // } while (i < mixedArray.length);
+
+            // Display the result
+            document.getElementById('output').innerHTML = output;
+        }
+    </script>
+</body>
+</html>

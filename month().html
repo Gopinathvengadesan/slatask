@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Current Month</title>
+ 
+</head>
+<body>
+    <h1>Display Current Month</h1>
+    <button onclick="displayCurrentMonth()">Show Current Month</button>
+    <div id="monthDisplay"></div>
+
+    <script>
+        function displayCurrentMonth() {
+       
+            const today = new Date();
+       
+            const monthIndex = today.getMonth();
+
+            let monthName;
+
+     
+            switch (monthIndex) {
+                case 0:
+                    monthName = "January";
+                    break;
+                case 1:
+                    monthName = "February";
+                    break;
+                case 2:
+                    monthName = "March";
+                    break;
+                case 3:
+                    monthName = "April";
+                    break;
+                case 4:
+                    monthName = "May";
+                    break;
+                case 5:
+                    monthName = "June";
+                    break;
+                case 6:
+                    monthName = "July";
+                    break;
+                case 7:
+                    monthName = "August";
+                    break;
+                case 8:
+                    monthName = "September";
+                    break;
+                case 9:
+                    monthName = "October";
+                    break;
+                case 10:
+                    monthName = "November";
+                    break;
+                case 11:
+                    monthName = "December";
+                    break;
+                default:
+                    monthName = "Unknown";
+                    break;
+            }
+
+            document.getElementById('monthDisplay').innerText = `Current month is: ${monthName}`;
+        }
+    </script>
+</body>
+</html>

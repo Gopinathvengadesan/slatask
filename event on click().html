@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Button Click Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Button Click Event Handling</h1>
+    <button onclick="handleClick()">Click Me!</button>
+    <div id="message"></div>
+
+    <script>
+       
+        function handleClick() {
+                const message = "Button was clicked!";
+            
+       
+            document.getElementById('message').innerText = message;
+
+                    console.log(message);
+        }
+    </script>
+</body>
+</html>
